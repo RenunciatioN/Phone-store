@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+}
+
+:root {
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+}
+
+header {
+	background-color: #fff;
+}
+
+body {
+	background-color: #F5F5F7;
+	overflow-x: hidden;
+
+	
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+}
+
+
+
+footer {
+	background-color: #333;
+	margin-top: 100px;
+	height: 100px;
+}
+
+
+.swiper-slide {
+	img {
+		cursor: grab;
+		&:active {
+			cursor: grabbing !important;
+		}
+	}
+}

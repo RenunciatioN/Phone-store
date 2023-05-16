@@ -1,0 +1,141 @@
+
+.formPage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #ebecf0;
+}
+
+.form-wrapp {
+	$ruler: 16px;
+	$color-red: #ae1100;
+	$color-bg: #ebecf0;
+	$color-shadow: #babecc;
+	$color-white: #fff;
+
+	color: $color-shadow;
+	text-shadow: 1px 1px 1px $color-white;
+	letter-spacing: -0.2px;
+	font-size: $ruler;
+
+	a {
+		color: $color-shadow;
+	}
+
+	form {
+		width: $ruler * 20;
+		margin: 0 auto;
+		box-shadow: inset 2px 2px 5px $color-shadow,
+			inset -5px -5px 10px $color-white;
+		padding: 20px 60px 40px 60px;
+		border-radius: 25px;
+	}
+
+	.segment {
+		padding: $ruler * 2 0;
+		text-align: center;
+	}
+
+	button,
+	input {
+		border: 0;
+		outline: 0;
+		font-size: $ruler;
+		border-radius: $ruler * 20;
+		padding: $ruler;
+		background-color: $color-bg;
+		text-shadow: 1px 1px 0 $color-white;
+	}
+
+	label {
+		display: block;
+		margin-bottom: $ruler;
+		width: 100%;
+	}
+
+	input {
+		box-shadow: inset 2px 2px 5px $color-shadow,
+			inset -5px -5px 10px $color-white;
+		width: 100%;
+		box-sizing: border-box;
+		transition: all 0.2s ease-in-out;
+		appearance: none;
+		-webkit-appearance: none;
+
+		&:focus {
+			box-shadow: inset 1px 1px 2px $color-shadow,
+				inset -1px -1px 2px $color-white;
+		}
+	}
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #61677c;
+		font-weight: bold;
+		box-shadow: -5px -5px 20px $color-white, 5px 5px 20px $color-shadow;
+		transition: all 0.2s ease-in-out;
+		cursor: pointer;
+		font-weight: 600;
+
+		&:hover {
+			box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+		}
+
+		&:active {
+			box-shadow: inset 1px 1px 2px $color-shadow,
+				inset -1px -1px 2px $color-white;
+		}
+	}
+	.form-link {
+		text-align: center;
+		margin-top: 20px;
+		line-height: 1.5;
+
+		a {
+			color: #0598c5;
+		}
+	}
+}
+$duration: 5.5s;
+$text-color: rgba(255, 255, 255, 0.3);
+$bgr-color: #333;
+.shine {
+	background: #222 -webkit-gradient(
+			linear,
+			left top,
+			right top,
+			from(#222),
+			to(#222),
+			color-stop(0.5, #fff)
+		) 0 0 no-repeat;
+	color: $text-color;
+	background-size: 150px;
+	animation-name: shine;
+	background-clip: text;
+	animation-duration: $duration;
+	animation-iteration-count: infinite;
+	-webkit-background-size: 150px;
+	-webkit-background-clip: text;
+	-webkit-animation-name: shine;
+	-webkit-animation-duration: $duration;
+	-webkit-animation-iteration-count: infinite;
+	text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+}
+@keyframes shine {
+	0%,
+	10% {
+		background-position: -1000px;
+	}
+	20% {
+		background-position: top left;
+	}
+	90% {
+		background-position: top 0;
+	}
+	100% {
+		background-position: 1000px;
+	}
+}
